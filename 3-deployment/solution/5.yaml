@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: back-end
+spec:
+  selector:
+    matchLabels:
+      app: back-end
+  template:
+    metadata:
+      labels:
+        app: back-end
+    spec:
+      containers:
+      - name: back-end
+        image: dheeru3d/back-end
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "200m"
+        env:
+         - name: APP_USER
+           valueFrom:
+               configMapKeyRef:
+                 name: customer-config  
+                 key: user-name 
+        ports:
+        - containerPort: 80
+        volumeMounts:
+          - name: back-end-db-str-vol
+            mountPath: /app/appsettings.secrets.json
+            subPath: appsettings.secrets.json
+      volumes:
+        - name: back-end-db-str-vol
+          secret:
+              secretName: back-end-db-con-str
+        

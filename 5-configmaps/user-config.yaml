@@ -1,6 +1,6 @@
-apiVersion:
-kind: 
+apiVersion: v1
+kind: ConfigMap
 metadata:
-  name: 
+  name: customer-config
 data:
-  
+  user-name: "Dheeraj D"
