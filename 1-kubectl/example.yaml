@@ -1,0 +1,148 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: america-ui
+  labels:
+    name: america
+    type: front-end
+spec:
+  containers:
+  - name: america
+    image: nginx
+    resources:
+      limits:
+        memory: "32Mi"
+        cpu: "64m"
+    ports:
+      - containerPort: 7555
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: america-api
+  labels:
+    name: america
+    type: back-end
+spec:
+  containers:
+  - name: america-api
+    image: busybox
+    resources:
+      limits:
+        memory: "32Mi"
+        cpu: "64m"
+    command: ['sh', '-c', 'echo Hello america! && sleep 3600'] 
+---        
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: asia-ui
+  labels:
+    name: asia
+    type: front-end
+  annotations:
+    owner: dheeraj duggiraju
+spec:
+  containers:
+  - name: asia
+    image: nginx
+    resources:
+      limits:
+        memory: "32Mi"
+        cpu: "64m"
+    ports:
+      - containerPort: 7555
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: asia-api
+  labels:
+    name: asia
+    type: back-end
+spec:
+  containers:
+  - name: asia-api
+    image: busybox
+    resources:
+      limits:
+        memory: "32Mi"
+        cpu: "64m"
+    command: ['sh', '-c', 'echo Hello asia! && sleep 3600'] 
+
+---        
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: africa-ui
+  labels:
+    name: africa
+    type: front-end
+spec:
+  containers:
+  - name: africa
+    image: nginx
+    resources:
+      limits:
+        memory: "32Mi"
+        cpu: "64m"
+    ports:
+      - containerPort: 7555
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: africa-api
+  labels:
+    name: africa
+    type: back-end
+spec:
+  containers:
+  - name: africa-api
+    image: busybox
+    resources:
+      limits:
+        memory: "32Mi"
+        cpu: "64m"
+    command: ['sh', '-c', 'echo Hello africa! && sleep 3600'] 
+---        
+
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: europe-ui
+  labels:
+    name: europe
+    type: front-end
+spec:
+  containers:
+  - name: europe
+    image: nginx
+    resources:
+      limits:
+        memory: "32Mi"
+        cpu: "64m"
+    ports:
+      - containerPort: 7555
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: europe-api
+  labels:
+    name: europe
+    type: back-end
+spec:
+  containers:
+  - name: europe-api
+    image: busybox
+    resources:
+      limits:
+        memory: "32Mi"
+        cpu: "64m"
+    command: ['sh', '-c', 'echo Hello europe! && sleep 3600'] 
+---        
