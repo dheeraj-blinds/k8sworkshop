@@ -1,26 +1,21 @@
 # k8sworkshop
 
-Yaml files for kubernetes workshop
-
-The code for applications we hosted using k8s is available at https://github.com/dheeraj-blinds/docker-Task
-
-Deck for k8s https://prezi.com/view/NHG6MYoaYI8vxgmAnqQN/
-
-Following are the commands that we used during the workshop
-
-****** Kubectl commands **********
- 
- kubectl help
- kubectl config
- kubectl config current-context
- kubectl get api-resources
- kubectl api-resources
- kubectl explain pod
- kubectl explain pod.spec
- kubectl explain pod.spec.containers
- kubectl create namespace gcc
- kubectl get namespaces
- kubectl apply -f .\1-kubectl\example.yaml
+Yaml files for kubernetes workshop  
+The code for applications we hosted using k8s is available at https://github.com/dheeraj-blinds/docker-Task  
+Deck for k8s https://prezi.com/view/NHG6MYoaYI8vxgmAnqQN/  
+Following are the commands that we used during the workshop 
+****** Kubectl commands **********       
+ kubectl help  
+ kubectl config  
+ kubectl config current-context  
+ kubectl get api-resources  
+ kubectl api-resources  
+ kubectl explain pod  
+ kubectl explain pod.spec  
+ kubectl explain pod.spec.containers  
+ kubectl create namespace gcc  
+ kubectl get namespaces  
+ kubectl apply -f .\1-kubectl\example.yaml  
  
  ******** pod commands************
  kubectl apply -f .\2-pod\solution\1.yaml
