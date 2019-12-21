@@ -19,7 +19,7 @@ Following are the commands that we used during the workshop
  kubectl get namespaces  
  kubectl apply -f .\1-kubectl\example.yaml  
  
- ******** pod commands************  
+ ******** pod commands ************  
  kubectl apply -f .\2-pod\solution\1.yaml    
  kubectl get pods  
  kubect log hello-world  
@@ -53,7 +53,7 @@ Following are the commands that we used during the workshop
  kubectl get pods  
  kubectl logs back-end-74948d5f7-npxz5  
  
- ************ Secrets Commands************************  
+ ************ Secrets Commands ************************  
  kubectl apply -f .\6-secrets\app-secret.yaml  
  kubectl apply -f .\3-deployment\solution\4.yaml  
  
@@ -62,6 +62,6 @@ Following are the commands that we used during the workshop
  kubectl rollout deployment/back-end --history  
  kubectl rollout history deployment/back-end  
  
- ****** out put format of deployment commands************  
+ ****** out put format of deployment commands ************  
  kubectl get deployment front-end -o yaml  
  kubectl get deployment front-end -o json   
