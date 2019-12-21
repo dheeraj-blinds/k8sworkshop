@@ -31,7 +31,7 @@ Following are the commands that we used during the workshop
  kubectl delete -f .\1-kubectl\example.yaml    
  kubectl get pods  
  
- ************* Deployment commands *****************
+ ************* Deployment commands *****************  
  kubectl apply -f .\3-deployment\solution\1.yaml  
  kubectl get pods  
  kubectl apply -f .\3-deployment\solution\2.yaml
