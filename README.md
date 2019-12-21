@@ -58,8 +58,6 @@ Following are the commands that we used during the workshop
  kubectl apply -f .\3-deployment\solution\4.yaml  
  
  ***** deployment commands ********************  
- kubectl rollout deployment/back-end history  
- kubectl rollout deployment/back-end --history  
  kubectl rollout history deployment/back-end  
  
  ****** out put format of deployment commands ************  
